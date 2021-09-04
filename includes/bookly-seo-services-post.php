@@ -9,6 +9,7 @@ if (!class_exists('BooklySeoServicesPost')) {
 
         public static $post_slug = 'services';
 
+
         public static $menu_icon = '';
 
         /**
@@ -67,8 +68,8 @@ if (!class_exists('BooklySeoServicesPost')) {
                 'map_meta_cap' => true,
                 'hierarchical' => true,
                 'rewrite' => array('slug' => self::get_post_slug()),
-                'menu_position' => 5,
-                'menu_icon' => 'dashicons-share-alt',
+                'menu_position' => 80,
+                'menu_icon' => plugins_url('sbita-bookly-seo/assets/img/bookly-seo.png'),
                 'exclude_from_search' => false,
                 'publicly_queryable' => true,
                 'has_archive' => true,
@@ -83,6 +84,7 @@ if (!class_exists('BooklySeoServicesPost')) {
                     'page-attributes',
                     'thumbnail',
                     'custom-fields',
+                    'template',
                 ),
             );
 

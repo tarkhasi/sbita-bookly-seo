@@ -5,6 +5,8 @@ if (!class_exists('BooklySeoSync')) {
 
     class BooklySeoSync
     {
+        public static $post_item_id = '_sbita_bs_item_id';
+
         /**
          * Move to trash deleted items
          *

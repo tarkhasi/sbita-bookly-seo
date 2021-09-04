@@ -1,0 +1,111 @@
+
+[class*='sbu-'] {
+    text-decoration: none;
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.sbu-rounded {
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+.sbu-nowrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sbu-not-found {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.sbu-box-shadow:hover {
+    box-shadow: 0 0 15px rgba(40, 40, 40, 0.16);
+}
+
+
+.sub-flex {
+    display: flex;
+}
+
+.sbu-p-t {
+    padding-top: 15px;
+}
+
+.sbu-border {
+    border: solid 1px rgba(9, 9, 9, 0.1);
+}
+
+
+/* Services */
+.sbu-service-main, .sbu-staff-detail {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    overflow: hidden;
+}
+
+.sbu-service-main .sbu-service-detail-image, .sbu-staff-detail-image {
+    width: 100%;
+}
+
+.sbu-service-main .sbu-service-detail-content, .sbu-staff-detail-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.sbu-service-main .sbu-service-detail-info, .sbu-staff-detail-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.sbu-service-main .sbu-service-detail-title, .sbu-staff-detail .sbu-staff-detail-title, .sbu-service-main .sbu-service-detail-category, .sbu-staff-detail .sbu-staff-detail-email {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.5em;
+    height: 3em;
+    width: 100%;
+}
+
+.sbu-service-main .sbu-service-detail-title, .sbu-staff-detail  .sbu-staff-detail-title {
+
+    width: 100%;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.sbu-service-main .sbu-service-detail-category, .sbu-staff-detail .sbu-staff-detail-email {
+    width: 100%;
+    font-size: 10pt;
+    padding: 10px 0 5px;
+}
+
+.sbu-service-main .sbu-service-detail-price {
+    padding-top: 5px;
+    width: 50%;
+    font-size: 15pt;
+}
+
+.sbu-service-main .sbu-service-detail-duration {
+    padding-top: 5px;
+    width: 50%;
+    font-size: 15pt;
+}
+
+.sbu-service-main .sbu-service-detail-footer, .sbu-staff-detail .sbu-staff-detail-footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.sbu-service-main .sbu-service-detail-footer a, .sbu-staff-detail .sbu-staff-detail-footer a {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background: rgba(35, 35, 35, 0.03);
+    border-top: solid 1px rgba(9, 9, 9, 0.05);
+}

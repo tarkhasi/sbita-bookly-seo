@@ -17,14 +17,16 @@ if (!class_exists('SbitaBooklySeo')) {
 
 
     include plugin_dir_path(__FILE__) . '/includes/functions.php';
+    include plugin_dir_path(__FILE__) . '/includes/bookly-seo-sync.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-services-post.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-staff-post.php';
-    include plugin_dir_path(__FILE__) . '/includes/bookly-seo-sync.php';
+    include plugin_dir_path(__FILE__) . '/includes/bookly-seo-shortcodes.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-sync-points.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-services-sync.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-staff-sync.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-settings.php';
     include plugin_dir_path(__FILE__) . '/includes/bookly-seo-admin.php';
+    include plugin_dir_path(__FILE__) . '/includes/bookly-seo-ui.php';
 
 
     class SbitaBooklySeo
@@ -41,6 +43,7 @@ if (!class_exists('SbitaBooklySeo')) {
             add_action('init', array(__CLASS__, 'init'));
             add_action('admin_init', array(__CLASS__, 'admin_init'));
 
+            BooklySeoShortcodes::main();
             BooklySeoAdmin::main();
             BooklySeoSettings::main();
             BooklySeoServicesPost::main();
@@ -48,6 +51,7 @@ if (!class_exists('SbitaBooklySeo')) {
             BooklySeoStaffSync::main();
             BooklySeoServicesSync::main();
             BooklySeoSyncPoints::main();
+            BooklySeoUi::main();
 
 
         }
@@ -62,6 +66,7 @@ if (!class_exists('SbitaBooklySeo')) {
             BooklySeoStaffSync::init();
             BooklySeoServicesSync::init();
             BooklySeoSyncPoints::init();
+            BooklySeoUi::init();
         }
 
         /**

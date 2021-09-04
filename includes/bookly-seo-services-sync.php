@@ -5,8 +5,6 @@ if (!class_exists('BooklySeoServicesSync')) {
 
     class BooklySeoServicesSync
     {
-
-
         /**
          * Main
          */
@@ -66,7 +64,7 @@ if (!class_exists('BooklySeoServicesSync')) {
                         '_thumbnail_id' => $item['attachment_id'] ?? '',
                         '_wp_page_template' => sbita_get_option('bs_staff_template') ?? 'default',
                         '_sbita_bs_item' => json_encode($item),
-                        '_sbita_bs_item_id' => $item['id'],
+                        BooklySeoSync::$post_item_id => $item['id'],
                     ),
                 );
 
@@ -74,7 +72,7 @@ if (!class_exists('BooklySeoServicesSync')) {
                     'posts_per_page' => -1,
                     'post_type' => BooklySeoServicesPost::post_type(),
                     'post_status' => array('publish', 'pending', 'draft', 'auto-draft', 'future', 'private', 'inherit', 'trash'),
-                    'meta_key' => '_sbita_bs_item_id',
+                    'meta_key' => BooklySeoSync::$post_item_id,
                     'meta_value' => $item['id']
                 );
                 $posts = get_posts($args);
