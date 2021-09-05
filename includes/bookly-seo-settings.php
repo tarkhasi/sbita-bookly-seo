@@ -20,6 +20,29 @@ if (!class_exists('BooklySeoSettings')) {
 
         private static function add_settings()
         {
+
+            // >> Title
+            $whc_option = new SbitaCoreOptionModel(null);
+            $whc_option->setInputType('split');
+            $whc_option->setLabel(__('Sync', 'sbita-bookly-seo'));
+            $whc_option->setGroup(self::$group_name);
+            $whc_option->add();
+
+            // Auto sync
+            $whc_option = new SbitaCoreOptionModel('bs_auto_sync');
+            $whc_option->setDefaultValue('1');
+            $whc_option->setInputType('checkbox');
+            $whc_option->setLabel(__('Auto sync services and staff members by their posts if you open bookly services or bookly staff members page.', 'sbita-bookly-seo'));
+            $whc_option->setGroup(self::$group_name);
+            $whc_option->add();
+
+            // Line
+            $whc_option = new SbitaCoreOptionModel(null);
+            $whc_option->setInputHtml('<hr/>');
+            $whc_option->setGroup(self::$group_name);
+            $whc_option->add();
+
+
             if (!is_plugin_active('sbita-bookly-ui/main.php')) {
                 // >> Title
                 $whc_option = new SbitaCoreOptionModel(null);
@@ -137,29 +160,6 @@ if (!class_exists('BooklySeoSettings')) {
             $whc_option->setLabel(__('Show staff details in post content', 'sbita-bookly-seo'));
             $whc_option->setGroup(self::$group_name);
             $whc_option->add();
-
-            // Line
-            $whc_option = new SbitaCoreOptionModel(null);
-            $whc_option->setInputHtml('<hr/>');
-            $whc_option->setGroup(self::$group_name);
-            $whc_option->add();
-
-
-            // >> Title
-            $whc_option = new SbitaCoreOptionModel(null);
-            $whc_option->setInputType('split');
-            $whc_option->setLabel(__('Sync', 'sbita-bookly-seo'));
-            $whc_option->setGroup(self::$group_name);
-            $whc_option->add();
-
-            // Auto sync
-            $whc_option = new SbitaCoreOptionModel('bs_auto_sync');
-            $whc_option->setDefaultValue('1');
-            $whc_option->setInputType('checkbox');
-            $whc_option->setLabel(__('Auto sync services and staff members by their posts if you open bookly services or bookly staff members page.', 'sbita-bookly-seo'));
-            $whc_option->setGroup(self::$group_name);
-            $whc_option->add();
-
 
         }
 

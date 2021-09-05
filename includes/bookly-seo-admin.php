@@ -9,7 +9,7 @@ if (!class_exists('BooklySeoAdmin')) {
          */
         public static function main()
         {
-            add_action('admin_init', array(__CLASS__, 'admin_init'));
+            add_action('admin_menu', array(__CLASS__, 'admin_menu'));
         }
 
         /**
@@ -31,6 +31,20 @@ if (!class_exists('BooklySeoAdmin')) {
             array_unshift($links, '<a href="' . sbita_settings_url(BooklySeoSettings::$group_name) . '">Settings</a>');
 
             return $links;
+        }
+
+        /**
+         * Admin menu
+         */
+        public static function admin_menu()
+        {
+            add_submenu_page(
+                'edit.php?post_type=' . BooklySeoServicesPost::post_type(),
+                __('Settings', 'sbita-bookly-seo'),
+                __('Settings', 'sbita-bookly-seo'),
+                'manage_options',
+                sbita_settings_url(BooklySeoSettings::$group_name)
+            );
         }
 
     }
