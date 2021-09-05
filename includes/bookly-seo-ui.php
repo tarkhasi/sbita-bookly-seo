@@ -132,8 +132,9 @@ if (!class_exists('BooklySeoUi')) {
             $url = $url . '?service_id=' . $item['id'];
             $title = sbita_get_option('bs_service_next_button_title') ?? 'Next';
             $button_class = 'sbu-bookly-color sbu-color-white-hover sbu-bookly-bg-hover';
-            if (isset($attrs['button_label'])) $title = $attrs['button_label'];
-            if (isset($attrs['button_class'])) $button_class = $attrs['button_class'];
+
+            if (!empty($attrs['button_label'])) $title = $attrs['button_label'];
+            if (!empty($attrs['button_class'])) $button_class = $attrs['button_class'];
             echo '<a href="' . $url . '" class="'.$button_class.'"  > ' . __($title, 'sbita-bookly-ui') . ' </a>';
         }
 
@@ -154,8 +155,8 @@ if (!class_exists('BooklySeoUi')) {
             $url = $url . '?staff_id=' . $item['id'];
             $title = sbita_get_option('bs_staff_next_button_title') ?? 'Next';
             $button_class = 'sbu-bookly-color sbu-color-white-hover sbu-bookly-bg-hover';
-            if (isset($attrs['button_label'])) $title = $attrs['button_label'];
-            if (isset($attrs['button_class'])) $button_class = $attrs['button_class'];
+            if (!empty($attrs['button_label'])) $title = $attrs['button_label'];
+            if (!empty($attrs['button_class'])) $button_class = $attrs['button_class'];
             echo '<a href="' . $url . '" class="'.$button_class.'"  > ' . __($title, 'sbita-bookly-ui') . '</a>';
         }
 
