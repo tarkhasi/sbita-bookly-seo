@@ -50,6 +50,7 @@ if (!class_exists('BooklySeoUi')) {
         public static function add_details_to_staff_content($content)
         {
             try {
+                if (!sbs_check_licence()) return $content;
                 if (!is_single()) return $content;
                 if (get_post_type() != BooklySeoStaffPost::post_type()) return $content;
                 if (!sbita_get_option('bs_show_staff_detail_in_post')) return $content;
@@ -95,6 +96,7 @@ if (!class_exists('BooklySeoUi')) {
          */
         public static function staff_url($url, $item, $attrs)
         {
+            if (!sbs_check_licence()) return $url;
             if (!$item || !isset($item['id'])) return $url;
 
             $args = array(
@@ -113,6 +115,7 @@ if (!class_exists('BooklySeoUi')) {
         {
             if (is_plugin_active('sbita-bookly-ui/main.php')) return;
             add_action('sbu_service_button', array(__CLASS__, 'item_buttons'), 1, 2);
+            
             add_action('sbu_staff_button', array(__CLASS__, 'staff_item_buttons'), 1, 2);
         }
 

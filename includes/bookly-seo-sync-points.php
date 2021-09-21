@@ -61,6 +61,7 @@ if (!class_exists('BooklySeoSyncPoints')) {
 
         public static function auto_sync()
         {
+            if (!sbs_check_licence()) return;
             $result = sbita_get_option('bs_auto_sync');
             if (!$result) return;
             add_action('wp_ajax_bookly_get_services', array(__CLASS__, 'sync_services'), 1);

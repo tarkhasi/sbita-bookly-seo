@@ -20,6 +20,7 @@ if (!class_exists('BooklySeoStaffSync')) {
          */
         public static function init()
         {
+            if (!sbs_check_licence()) return;
             add_action('sbs_sync_staff_members', array(__CLASS__, 'sync_items'));
         }
 

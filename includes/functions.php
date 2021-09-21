@@ -104,3 +104,30 @@ function sbs_price($price)
         return $price;
     }
 }
+
+/**
+ * Get price currency
+ */
+function sbs_check_licence($from_server = false)
+{
+    try {
+        $licence = sbita_get_option('bs_licence');
+        $product_id = sbs_get_product_id();
+        $local = sbita_get_option('bs_licence_activated');
+        if ($local !== null && $from_server == false) return $local;
+
+        $result = sbita_licence($licence, $product_id);
+        sbita_update_option('bs_licence_activated', $result);
+        return $result;
+    } catch (Exception $e) {
+        return false;
+    }
+}
+
+/**
+ * Get Product id
+ */
+function sbs_get_product_id()
+{
+    return '3569';
+}

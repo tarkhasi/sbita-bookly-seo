@@ -9,7 +9,10 @@ if (!class_exists('BooklySeoSettings')) {
         public static function main()
         {
 
+        }
 
+        public static function init()
+        {
         }
 
 
@@ -20,6 +23,16 @@ if (!class_exists('BooklySeoSettings')) {
 
         private static function add_settings()
         {
+            // Licence
+            $verified = sbs_check_licence();
+            $whc_option = new SbitaCoreOptionModel('bs_licence');
+            $whc_option->setDefaultValue(null);
+            $whc_option->setInputType('licence');
+            $whc_option->setLabel(__('Bookly Seo Pro (Add-on) Licence', 'sbita-bookly-seo'));
+            $whc_option->setData(['product_id' => sbs_get_product_id(), 'verified' => $verified]);
+            $whc_option->setDescription(__('Join the elite web professionals who enjoy <a href="https://wpkok.com/downloads/bookly-seo/" target="_blank">Sbita Bookly Seo Pro (Add-on)</a>!', 'sbita-bookly-seo'));
+            $whc_option->add('sbita_licenses', null);
+
 
             // >> Title
             $whc_option = new SbitaCoreOptionModel(null);
@@ -162,6 +175,8 @@ if (!class_exists('BooklySeoSettings')) {
             $whc_option->add();
 
         }
+
+
 
 
     }

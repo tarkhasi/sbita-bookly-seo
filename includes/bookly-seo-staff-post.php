@@ -24,7 +24,7 @@ if (!class_exists('BooklySeoStaffPost')) {
          */
         public static function init()
         {
-
+            if (!sbs_check_licence()) return;
             self::posts_register();
             sbita_flush('bookly-seo-' . self::get_post_slug());
         }

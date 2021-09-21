@@ -1,10 +1,11 @@
 <?php if (!defined('ABSPATH')) exit; // Exit if accessed directly
 /*
 Plugin Name: SbiTa Bookly Seo (Add-on)
-Description:
+Plugin URI: https://wordpress.org/plugins/sbita-bookly-seo/
+Description: That allows you to find your Bookly Services and Staff Members in search engines!
 Version: 1.0.0
 Author: WebKok
-Author URI:
+Author URI: https:://wpkok.com/
 Domain Path: /languages
 Text Domain: sbita-bookly-seo
 */
@@ -36,24 +37,22 @@ if (!class_exists('SbitaBooklySeo')) {
          */
         public static function main()
         {
-            $result = is_plugin_active('sbita/main.php') && is_plugin_active('bookly-addon-pro/main.php');
+            $result = is_plugin_active('sbita/main.php') && is_plugin_active('bookly-responsive-appointment-booking-tool/main.php');
             if (!$result) return self::need_core_message();
 
             add_action('plugins_loaded', array(__CLASS__, 'textdomain'));
             add_action('init', array(__CLASS__, 'init'));
             add_action('admin_init', array(__CLASS__, 'admin_init'));
 
+            BooklySeoSettings::main();
             BooklySeoShortcodes::main();
             BooklySeoAdmin::main();
-            BooklySeoSettings::main();
             BooklySeoServicesPost::main();
             BooklySeoStaffPost::main();
             BooklySeoStaffSync::main();
             BooklySeoServicesSync::main();
             BooklySeoSyncPoints::main();
             BooklySeoUi::main();
-
-
         }
 
         /**
@@ -61,6 +60,7 @@ if (!class_exists('SbitaBooklySeo')) {
          */
         public static function init()
         {
+            BooklySeoSettings::init();
             BooklySeoServicesPost::init();
             BooklySeoStaffPost::init();
             BooklySeoStaffSync::init();
