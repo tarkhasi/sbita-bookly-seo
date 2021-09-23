@@ -22,12 +22,12 @@ $title_style =  isset($attrs['title_style']) ? $attrs['title_style'] : '';
 
 ?>
 
-<div title="<?php echo $item['full_name'] ?? ''; ?>"
-     class="sbu-staff-detail <?php echo $attrs['item_class'] ?? $default_class ?>">
+<div title="<?php echo esc_attr($item['full_name']) ?? ''; ?>"
+     class="sbu-staff-detail <?php echo esc_attr($attrs['item_class'] ?? $default_class) ?>">
 
     <div class="sbu-staff-detail-image">
         <?php if ($url) { ?>
-            <a href="<?php echo $url ?>">
+            <a href="<?php echo esc_url($url) ?>">
                 <?php require SBS_TMP_DIR . '/shortcodes/staff-details-img.php'; ?>
             </a>
         <?php } else { ?>
@@ -37,11 +37,11 @@ $title_style =  isset($attrs['title_style']) ? $attrs['title_style'] : '';
 
     <div class="sbu-staff-detail-content">
         <div class="sbu-staff-detail-info">
-            <div class="sbu-staff-detail-title" title="<?php echo $item['full_name'] ?? ''; ?>" style="<?php echo $title_style ?>">
-                <?php echo $item['full_name']; ?>
+            <div class="sbu-staff-detail-title" title="<?php echo esc_attr($item['full_name'] ?? ''); ?>" style="<?php echo esc_html($title_style) ?>">
+                <?php echo esc_html($item['full_name']); ?>
             </div>
-            <div class="sbu-staff-detail-email" title="<?php echo $item['email'] ?? ''; ?>">
-                <a href="mailto:<?php echo $item['email'] ?? ''; ?>"><?php echo $item['email'] ?? ''; ?></a>
+            <div class="sbu-staff-detail-email" title="<?php echo esc_html($item['email'] ?? ''); ?>">
+                <a href="mailto:<?php echo esc_html($item['email']) ?? ''; ?>"><?php echo esc_html($item['email'] ?? ''); ?></a>
             </div>
             <?php do_action('sbu_staff_info', $item, $attrs); ?>
         </div>

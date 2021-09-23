@@ -86,7 +86,7 @@ if (!class_exists('BooklySeoSyncPoints')) {
             ?>
             <script>
                 jQuery(function () {
-                    jQuery("body .wrap h1").append('<a href="<?php echo $url ?>" class="page-title-action" style="margin:0 15px"><?php _e('Sync with bookly', 'sbita-bookly-seo') ?></a>');
+                    jQuery("body .wrap h1").append('<a href="<?php echo esc_url($url) ?>" class="page-title-action" style="margin:0 15px"><?php _e('Sync with bookly', 'sbita-bookly-seo') ?></a>');
                 });
             </script>
             <?php

@@ -138,7 +138,7 @@ if (!class_exists('BooklySeoUi')) {
 
             if (!empty($attrs['button_label'])) $title = $attrs['button_label'];
             if (!empty($attrs['button_class'])) $button_class = $attrs['button_class'];
-            echo '<a href="' . $url . '" class="'.$button_class.'"  > ' . __($title, 'sbita-bookly-ui') . ' </a>';
+            echo '<a href="' . esc_url($url) . '" class="'.esc_attr($button_class).'"  > ' . esc_html__($title, 'sbita-bookly-ui') . ' </a>';
         }
 
 
@@ -160,7 +160,7 @@ if (!class_exists('BooklySeoUi')) {
             $button_class = 'sbu-bookly-color sbu-color-white-hover sbu-bookly-bg-hover';
             if (!empty($attrs['button_label'])) $title = $attrs['button_label'];
             if (!empty($attrs['button_class'])) $button_class = $attrs['button_class'];
-            echo '<a href="' . $url . '" class="'.$button_class.'"  > ' . __($title, 'sbita-bookly-ui') . '</a>';
+            echo '<a href="' . esc_url($url) . '" class="'.esc_attr($button_class).'"  > ' . esc_html__($title, 'sbita-bookly-ui') . '</a>';
         }
 
     }
