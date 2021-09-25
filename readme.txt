@@ -12,7 +12,9 @@ That allows you to find your Bookly Services and Staff Members in search engines
 
 == Description ==
 
-Important: This plugin is an add-on that requires the Bookly installed and activated. [View Bookly page](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/). Sbita Bookly Seo (Add-on) that allows you to find your services and staff members in search engines! With this plugin you can have pages for your services and employees and globalize them using any SEO plugins.
+Important: This plugin is an add-on that requires the Bookly installed and activated. [View Bookly page](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/).
+
+Sbita Bookly Seo (Add-on) that allows you to find your services and staff members in search engines! With this plugin you can have pages for your services and employees and globalize them using any SEO plugins.
 
 FREE Features:
 * Create pages for Bookly Services
@@ -20,7 +22,7 @@ FREE Features:
 * Compatible with any Wordpress seo plugins.
 
 
-PRO Features:
+[PRO](https://wpkok.com/downloads/bookly-seo/) Features:
 * Compatible with Bookly Ui
 * Auto create pages for Bookly Services
 * Auto sync Bookly Staff members by created pages
@@ -29,7 +31,7 @@ PRO Features:
 * Add Service/Staff details for booking in pages
 * Compatible with any Wordpress seo plugins like: **All in One SEO for WordPress (AIOSEO)**, **Yoast SEO** and more .
 
-Join the elite web professionals who enjoy [Sbita Bookly Seo Pro](https://wpkok.com/downloads/bookly-seo-pro/)!
+Join the elite web professionals who enjoy [Sbita Bookly Seo Pro](https://wpkok.com/downloads/bookly-seo/)!
 
 
 == Frequently Asked Questions ==
