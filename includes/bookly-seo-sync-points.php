@@ -71,14 +71,17 @@ if (!class_exists('BooklySeoSyncPoints')) {
         public static function sync_buttons()
         {
             global $wp;
-            if (!isset($_GET['post_type'])) return;
-            if ($_GET['post_type'] != 'bookly-seo-staff' && $_GET['post_type'] != 'bookly-seo-services') return;
+            $post_type = sanitize_text_field($_GET['post_type'] ?? null);
+            if (empty($post_type)) return;
+            if (sanitize_text_field($post_type) != 'bookly-seo-staff' && sanitize_text_field($post_type) != 'bookly-seo-services') return;
 
             $query_vars = $wp->query_vars;
             $query_vars['sync_request'] = 'true';
             $url = add_query_arg($query_vars, home_url($wp->request));
 
-            if (isset($_GET['sync_request'])) {
+            $sync_request = sanitize_text_field($_GET['sync_request'] ?? null);
+
+            if (!empty($sync_request)) {
                 do_action('sbs_sync');
                 sbita_show_admin_message(__('Sync successfully!', 'sbita-bookly-seo'), true, null);
             }

@@ -1,7 +1,7 @@
 <?php if (!defined('ABSPATH')) exit; // Exit if accessed directly
 /*
 Plugin Name: SbiTa Bookly Seo (Add-on)
-Plugin URI: https://wordpress.org/plugins/sbita-bookly-seo/
+Plugin URI: https://wordpress.org/plugins/sbita-bookly-seo-add-on/
 Description: That allows you to find your Bookly Services and Staff Members in search engines!
 Version: 1.0.0
 Author: WebKok

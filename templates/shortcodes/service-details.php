@@ -39,7 +39,7 @@ $title_style = isset($attrs['title_style']) ? $attrs['title_style'] : '';
     <div class="sbu-service-detail-content">
         <div class="sbu-service-detail-info">
             <div class="sbu-service-detail-title" style="<?php echo esc_attr($title_style) ?>">
-                <?php echo esc_html($item['title']); ?><?php echo esc_html($item['title']); ?>
+                <?php echo esc_html($item['title']); ?>
             </div>
             <div class="sbu-service-detail-category" title="<?php _e('Category', 'sbita-bookly-ui'); ?>">
                 <?php echo esc_html($item['category_name']); ?>
