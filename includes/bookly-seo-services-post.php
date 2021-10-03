@@ -69,7 +69,7 @@ if (!class_exists('BooklySeoServicesPost')) {
                 'hierarchical' => true,
                 'rewrite' => array('slug' => self::get_post_slug()),
                 'menu_position' => 80,
-                'menu_icon' => plugins_url('sbita-bookly-seo/assets/img/bookly-seo.png'),
+                'menu_icon' => sbita_plugin_asset_url(__FILE__, 'img/bookly-seo.png'),
                 'exclude_from_search' => false,
                 'publicly_queryable' => true,
                 'has_archive' => true,
