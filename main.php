@@ -3,7 +3,7 @@
 Plugin Name: SbiTa Bookly Seo (Add-on)
 Plugin URI: https://wordpress.org/plugins/sbita-bookly-seo-add-on/
 Description: That allows you to find your Bookly Services and Staff Members in search engines!
-Version: 1.0.1
+Version: 1.0.3
 Author: WebKok
 Author URI: https:://wpkok.com/
 Domain Path: /languages

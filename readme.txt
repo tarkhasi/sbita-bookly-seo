@@ -3,7 +3,7 @@ Contributors: sbita
 Tags: bookly, seo, booking, add-on
 Requires at least: 4.7
 Tested up to: 5.8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -29,7 +29,7 @@ FREE Features:
 * Auto create pages for Bookly Staff members
 * Auto sync Bookly Services by created pages
 * Add Service/Staff details for booking in pages
-* Compatible with any Wordpress seo plugins like: **All in One SEO for WordPress (AIOSEO)**, **Yoast SEO** and more .
+* Compatible with any Wordpress seo plugins like: **All in One SEO for WordPress (AIOSEO)**, **Yoast SEO**, **Monster Insights**, **Seo Press** and more .
 
 Join the elite web professionals who enjoy [Sbita Bookly Seo Pro](https://wpkok.com/downloads/bookly-seo/)!
 
@@ -39,7 +39,17 @@ Join the elite web professionals who enjoy [Sbita Bookly Seo Pro](https://wpkok.
 
 == Screenshots ==
 
-1. Manage and configure installed [Wpkok.com](https://wpkok.com/ "Wpkok.com") plugins
+1. Bookly Seo Admin Menus
+2. Services list that sync with Bookly
+3. Edit Service page
+4. Bookly Seo and WordPress Seo Plugins
+5. Auth create special page for Bookly Service
+6. Booking card in services pages
+7. Staff Members list
+8. Special page for Staff Members
+9. Seo for Staff Members
+10. Customize Settings
+
 
 == Changelog ==
 
