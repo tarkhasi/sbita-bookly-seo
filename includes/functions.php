@@ -99,7 +99,9 @@ function sbs_price($price)
 {
     try {
         $currencies = Bookly\Lib\Utils\Price::getCurrencies();
-        return $currencies[get_option('bookly_pmt_currency')]['symbol'] . ' ' . $price;
+        $symbol = $currencies[get_option('bookly_pmt_currency')]['symbol'];
+        $price = $symbol . ' ' . $price;
+        return apply_filters('bookly_plus_service_price', $price, $currencies, $symbol);
     } catch (Exception $e) {
         return $price;
     }
